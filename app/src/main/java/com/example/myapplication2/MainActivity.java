@@ -9,14 +9,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        addFragmnet();
+        addFragment();
 
     }
-    private void addFragmnet(){
+    private void addFragment(){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         BlankFragment01 blankFragment01 = new BlankFragment01();
         fragmentTransaction.add(R.id.container_framLayout, blankFragment01);
+        fragmentTransaction.addToBackStack("fragmentBackStack1");
         fragmentTransaction.commit();
 
     }

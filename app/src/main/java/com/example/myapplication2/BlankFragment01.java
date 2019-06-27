@@ -28,4 +28,5 @@ public class BlankFragment01 extends Fragment {
         return inflater.inflate(R.layout.fragment_blank_fragment01, container, false);
     }
 
+
 }
